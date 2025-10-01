@@ -32,6 +32,7 @@
             textBox_secondNumber = new TextBox();
             textBox_finalResult = new TextBox();
             button_add = new Button();
+            button_sub = new Button();
             SuspendLayout();
             // 
             // textBox_firstNumber
@@ -71,11 +72,23 @@
             button_add.UseVisualStyleBackColor = true;
             button_add.Click += button_add_Click;
             // 
+            // button_sub
+            // 
+            button_sub.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_sub.Location = new Point(187, 153);
+            button_sub.Name = "button_sub";
+            button_sub.Size = new Size(94, 56);
+            button_sub.TabIndex = 4;
+            button_sub.Text = "-";
+            button_sub.UseVisualStyleBackColor = true;
+            button_sub.Click += button_sub_Click;
+            // 
             // form_calculator
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(440, 450);
+            Controls.Add(button_sub);
             Controls.Add(button_add);
             Controls.Add(textBox_finalResult);
             Controls.Add(textBox_secondNumber);
@@ -92,5 +105,6 @@
         private TextBox textBox_secondNumber;
         private TextBox textBox_finalResult;
         private Button button_add;
+        private Button button_sub;
     }
 }
