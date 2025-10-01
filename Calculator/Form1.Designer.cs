@@ -52,6 +52,7 @@
             // 
             // textBox_finalResult
             // 
+            textBox_finalResult.Enabled = false;
             textBox_finalResult.Location = new Point(61, 336);
             textBox_finalResult.Name = "textBox_finalResult";
             textBox_finalResult.PlaceholderText = "Final Result will appear here...";
