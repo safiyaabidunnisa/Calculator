@@ -2,6 +2,7 @@ namespace Calculator
 {
     public partial class form_calculator : Form
     {
+        int firstNumber, secondNumber, result;
         public form_calculator()
         {
             InitializeComponent();
@@ -9,18 +10,18 @@ namespace Calculator
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            int firstNumber = int.Parse(textBox_firstNumber.Text);
-            int secondNumber = int.Parse(textBox_secondNumber.Text);
-            int sum = firstNumber + secondNumber;
-            textBox_finalResult.Text = sum.ToString();
+            firstNumber = int.Parse(textBox_firstNumber.Text);
+            secondNumber = int.Parse(textBox_secondNumber.Text);
+            result = firstNumber + secondNumber;
+            textBox_finalResult.Text = result.ToString();
         }
 
         private void button_sub_Click(object sender, EventArgs e)
         {
-            int firstNumber = int.Parse(textBox_firstNumber.Text);
-            int secondNumber = int.Parse(textBox_secondNumber.Text);
-            int diff = firstNumber - secondNumber;
-            textBox_finalResult.Text = diff.ToString();
+            firstNumber = int.Parse(textBox_firstNumber.Text);
+            secondNumber = int.Parse(textBox_secondNumber.Text);
+            result = firstNumber - secondNumber;
+            textBox_finalResult.Text = result.ToString();
         }
     }
 }
