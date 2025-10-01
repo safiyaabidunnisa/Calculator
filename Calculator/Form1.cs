@@ -1,10 +1,18 @@
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class form_calculator : Form
     {
-        public Form1()
+        public form_calculator()
         {
             InitializeComponent();
+        }
+
+        private void button_add_Click(object sender, EventArgs e)
+        {
+            int firstNumber = int.Parse(textBox_firstNumber.Text);
+            int secondNumber  = int.Parse(textBox_secondNumber.Text);
+            int sum = firstNumber + secondNumber;
+            textBox_finalResult.Text = sum.ToString();
         }
     }
 }
