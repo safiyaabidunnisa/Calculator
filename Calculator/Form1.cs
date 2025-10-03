@@ -42,7 +42,7 @@ namespace Calculator
 
         private void button_clear_Click(object sender, EventArgs e)
         {
-            if(textBox_firstNumber.Text!=string.Empty)
+            if (textBox_firstNumber.Text != string.Empty)
             {
                 textBox_firstNumber.Text = "";
             }
@@ -53,6 +53,16 @@ namespace Calculator
             if (label_result.Text != "Final Result will appear here...")
             {
                 label_result.Text = "Final Result will appear here...";
+            }
+        }
+
+        private void button_backspace_Click(object sender, EventArgs e)
+        {
+            if(textBox_firstNumber.Text != string.Empty)
+            {
+                int len = textBox_firstNumber.Text.Length;
+                textBox_firstNumber.Text = textBox_firstNumber.Text.Remove(len - 1);
+                len = textBox_firstNumber.Text.Length;
             }
         }
     }

@@ -36,6 +36,7 @@
             button_div = new Button();
             label_result = new Label();
             button_clear = new Button();
+            button_backspace = new Button();
             SuspendLayout();
             // 
             // textBox_firstNumber
@@ -109,7 +110,7 @@
             // 
             // button_clear
             // 
-            button_clear.Location = new Point(300, 369);
+            button_clear.Location = new Point(244, 369);
             button_clear.Name = "button_clear";
             button_clear.Size = new Size(94, 29);
             button_clear.TabIndex = 8;
@@ -117,11 +118,22 @@
             button_clear.UseVisualStyleBackColor = true;
             button_clear.Click += button_clear_Click;
             // 
+            // button_backspace
+            // 
+            button_backspace.Location = new Point(96, 369);
+            button_backspace.Name = "button_backspace";
+            button_backspace.Size = new Size(94, 29);
+            button_backspace.TabIndex = 9;
+            button_backspace.Text = "Backspace";
+            button_backspace.UseVisualStyleBackColor = true;
+            button_backspace.Click += button_backspace_Click;
+            // 
             // form_calculator
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(440, 450);
+            Controls.Add(button_backspace);
             Controls.Add(button_clear);
             Controls.Add(label_result);
             Controls.Add(button_div);
@@ -146,5 +158,6 @@
         private Button button_div;
         private Label label_result;
         private Button button_clear;
+        private Button button_backspace;
     }
 }
