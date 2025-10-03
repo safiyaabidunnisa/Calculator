@@ -13,7 +13,7 @@ namespace Calculator
             firstNumber = int.Parse(textBox_firstNumber.Text);
             secondNumber = int.Parse(textBox_secondNumber.Text);
             result = firstNumber + secondNumber;
-            textBox_finalResult.Text = result.ToString();
+            label_result.Text = result.ToString();
         }
 
         private void button_sub_Click(object sender, EventArgs e)
@@ -21,7 +21,23 @@ namespace Calculator
             firstNumber = int.Parse(textBox_firstNumber.Text);
             secondNumber = int.Parse(textBox_secondNumber.Text);
             result = firstNumber - secondNumber;
-            textBox_finalResult.Text = result.ToString();
+            label_result.Text = result.ToString();
+        }
+
+        private void button_multiply_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToInt32(textBox_firstNumber.Text);
+            secondNumber = Convert.ToInt32(textBox_secondNumber.Text);
+            result = firstNumber * secondNumber;
+            label_result.Text = result.ToString();
+        }
+
+        private void button_div_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToInt32(textBox_firstNumber.Text);
+            secondNumber = Convert.ToInt32(textBox_secondNumber.Text);
+            result = firstNumber / secondNumber;
+            label_result.Text = result.ToString();
         }
     }
 }
