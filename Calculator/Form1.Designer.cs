@@ -37,6 +37,7 @@
             label_result = new Label();
             button_clear = new Button();
             button_backspace = new Button();
+            button_equal = new Button();
             SuspendLayout();
             // 
             // textBox_firstNumber
@@ -128,11 +129,22 @@
             button_backspace.UseVisualStyleBackColor = true;
             button_backspace.Click += button_backspace_Click;
             // 
+            // button_equal
+            // 
+            button_equal.Location = new Point(308, 212);
+            button_equal.Name = "button_equal";
+            button_equal.Size = new Size(94, 29);
+            button_equal.TabIndex = 10;
+            button_equal.Text = "=";
+            button_equal.UseVisualStyleBackColor = true;
+            button_equal.Click += button_equal_Click;
+            // 
             // form_calculator
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(440, 450);
+            Controls.Add(button_equal);
             Controls.Add(button_backspace);
             Controls.Add(button_clear);
             Controls.Add(label_result);
@@ -159,5 +171,6 @@
         private Label label_result;
         private Button button_clear;
         private Button button_backspace;
+        private Button button_equal;
     }
 }

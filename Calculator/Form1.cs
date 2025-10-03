@@ -3,6 +3,7 @@ namespace Calculator
     public partial class form_calculator : Form
     {
         int firstNumber, secondNumber, result;
+        int number;
         public form_calculator()
         {
             InitializeComponent();
@@ -58,12 +59,21 @@ namespace Calculator
 
         private void button_backspace_Click(object sender, EventArgs e)
         {
-            if(textBox_firstNumber.Text != string.Empty)
+            if (textBox_firstNumber.Text != string.Empty)
             {
                 int len = textBox_firstNumber.Text.Length;
                 textBox_firstNumber.Text = textBox_firstNumber.Text.Remove(len - 1);
                 len = textBox_firstNumber.Text.Length;
             }
+        }
+
+        private void button_equal_Click(object sender, EventArgs e)
+        {
+            string text = textBox_firstNumber.Text;
+            string[] textArray = new string[text.Length];
+            string[] addArray = text.Split('+');
+            result = int.Parse(addArray[0]) + int.Parse(addArray[1]);
+            label_result.Text = result.ToString();
         }
     }
 }
