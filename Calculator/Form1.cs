@@ -39,5 +39,21 @@ namespace Calculator
             result = firstNumber / secondNumber;
             label_result.Text = result.ToString();
         }
+
+        private void button_clear_Click(object sender, EventArgs e)
+        {
+            if(textBox_firstNumber.Text!=string.Empty)
+            {
+                textBox_firstNumber.Text = "";
+            }
+            if (textBox_secondNumber.Text != string.Empty)
+            {
+                textBox_secondNumber.Text = "";
+            }
+            if (label_result.Text != "Final Result will appear here...")
+            {
+                label_result.Text = "Final Result will appear here...";
+            }
+        }
     }
 }

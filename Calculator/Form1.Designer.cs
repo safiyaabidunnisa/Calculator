@@ -35,6 +35,7 @@
             button_multiply = new Button();
             button_div = new Button();
             label_result = new Label();
+            button_clear = new Button();
             SuspendLayout();
             // 
             // textBox_firstNumber
@@ -106,11 +107,22 @@
             label_result.TabIndex = 7;
             label_result.Text = "Final Result will appear here...";
             // 
+            // button_clear
+            // 
+            button_clear.Location = new Point(300, 369);
+            button_clear.Name = "button_clear";
+            button_clear.Size = new Size(94, 29);
+            button_clear.TabIndex = 8;
+            button_clear.Text = "Clear";
+            button_clear.UseVisualStyleBackColor = true;
+            button_clear.Click += button_clear_Click;
+            // 
             // form_calculator
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(440, 450);
+            Controls.Add(button_clear);
             Controls.Add(label_result);
             Controls.Add(button_div);
             Controls.Add(button_multiply);
@@ -133,5 +145,6 @@
         private Button button_multiply;
         private Button button_div;
         private Label label_result;
+        private Button button_clear;
     }
 }
