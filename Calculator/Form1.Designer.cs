@@ -28,90 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox_firstNumber = new TextBox();
-            textBox_secondNumber = new TextBox();
-            button_add = new Button();
-            button_sub = new Button();
-            button_multiply = new Button();
-            button_div = new Button();
-            label_result = new Label();
+            textBox_number = new TextBox();
             button_clear = new Button();
             button_backspace = new Button();
             button_equal = new Button();
             SuspendLayout();
             // 
-            // textBox_firstNumber
+            // textBox_number
             // 
-            textBox_firstNumber.Location = new Point(61, 42);
-            textBox_firstNumber.Name = "textBox_firstNumber";
-            textBox_firstNumber.PlaceholderText = "Enter first number";
-            textBox_firstNumber.Size = new Size(297, 27);
-            textBox_firstNumber.TabIndex = 0;
-            // 
-            // textBox_secondNumber
-            // 
-            textBox_secondNumber.Location = new Point(61, 96);
-            textBox_secondNumber.Name = "textBox_secondNumber";
-            textBox_secondNumber.PlaceholderText = "Enter second number";
-            textBox_secondNumber.Size = new Size(297, 27);
-            textBox_secondNumber.TabIndex = 1;
-            // 
-            // button_add
-            // 
-            button_add.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_add.Location = new Point(61, 153);
-            button_add.Name = "button_add";
-            button_add.Size = new Size(94, 56);
-            button_add.TabIndex = 3;
-            button_add.Text = "+";
-            button_add.UseVisualStyleBackColor = true;
-            button_add.Click += button_add_Click;
-            // 
-            // button_sub
-            // 
-            button_sub.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_sub.Location = new Point(187, 153);
-            button_sub.Name = "button_sub";
-            button_sub.Size = new Size(94, 56);
-            button_sub.TabIndex = 4;
-            button_sub.Text = "-";
-            button_sub.UseVisualStyleBackColor = true;
-            button_sub.Click += button_sub_Click;
-            // 
-            // button_multiply
-            // 
-            button_multiply.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_multiply.Location = new Point(61, 230);
-            button_multiply.Name = "button_multiply";
-            button_multiply.Size = new Size(94, 56);
-            button_multiply.TabIndex = 5;
-            button_multiply.Text = "*";
-            button_multiply.UseVisualStyleBackColor = true;
-            button_multiply.Click += button_multiply_Click;
-            // 
-            // button_div
-            // 
-            button_div.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_div.Location = new Point(187, 230);
-            button_div.Name = "button_div";
-            button_div.Size = new Size(94, 56);
-            button_div.TabIndex = 6;
-            button_div.Text = "/";
-            button_div.UseVisualStyleBackColor = true;
-            button_div.Click += button_div_Click;
-            // 
-            // label_result
-            // 
-            label_result.AutoSize = true;
-            label_result.Location = new Point(61, 326);
-            label_result.Name = "label_result";
-            label_result.Size = new Size(204, 20);
-            label_result.TabIndex = 7;
-            label_result.Text = "Final Result will appear here...";
+            textBox_number.Location = new Point(61, 107);
+            textBox_number.Name = "textBox_number";
+            textBox_number.Size = new Size(297, 27);
+            textBox_number.TabIndex = 0;
             // 
             // button_clear
             // 
-            button_clear.Location = new Point(244, 369);
+            button_clear.Location = new Point(264, 252);
             button_clear.Name = "button_clear";
             button_clear.Size = new Size(94, 29);
             button_clear.TabIndex = 8;
@@ -121,7 +53,7 @@
             // 
             // button_backspace
             // 
-            button_backspace.Location = new Point(96, 369);
+            button_backspace.Location = new Point(61, 252);
             button_backspace.Name = "button_backspace";
             button_backspace.Size = new Size(94, 29);
             button_backspace.TabIndex = 9;
@@ -131,7 +63,7 @@
             // 
             // button_equal
             // 
-            button_equal.Location = new Point(308, 212);
+            button_equal.Location = new Point(165, 195);
             button_equal.Name = "button_equal";
             button_equal.Size = new Size(94, 29);
             button_equal.TabIndex = 10;
@@ -147,13 +79,7 @@
             Controls.Add(button_equal);
             Controls.Add(button_backspace);
             Controls.Add(button_clear);
-            Controls.Add(label_result);
-            Controls.Add(button_div);
-            Controls.Add(button_multiply);
-            Controls.Add(button_sub);
-            Controls.Add(button_add);
-            Controls.Add(textBox_secondNumber);
-            Controls.Add(textBox_firstNumber);
+            Controls.Add(textBox_number);
             Name = "form_calculator";
             Text = "Calculator";
             ResumeLayout(false);
@@ -162,13 +88,7 @@
 
         #endregion
 
-        private TextBox textBox_firstNumber;
-        private TextBox textBox_secondNumber;
-        private Button button_add;
-        private Button button_sub;
-        private Button button_multiply;
-        private Button button_div;
-        private Label label_result;
+        private TextBox textBox_number;
         private Button button_clear;
         private Button button_backspace;
         private Button button_equal;

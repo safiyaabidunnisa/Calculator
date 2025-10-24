@@ -3,12 +3,12 @@ namespace Calculator
     public partial class form_calculator : Form
     {
         int firstNumber, secondNumber, result;
-        int number;
         public form_calculator()
         {
             InitializeComponent();
         }
 
+        /*Commenting out the Basic way of performing Operation
         private void button_add_Click(object sender, EventArgs e)
         {
             firstNumber = int.Parse(textBox_firstNumber.Text);
@@ -40,40 +40,45 @@ namespace Calculator
             result = firstNumber / secondNumber;
             label_result.Text = result.ToString();
         }
+        */
 
         private void button_clear_Click(object sender, EventArgs e)
         {
-            if (textBox_firstNumber.Text != string.Empty)
+            if (textBox_number.Text != string.Empty)
             {
-                textBox_firstNumber.Text = "";
+                textBox_number.Text = "";
             }
-            if (textBox_secondNumber.Text != string.Empty)
-            {
-                textBox_secondNumber.Text = "";
-            }
-            if (label_result.Text != "Final Result will appear here...")
-            {
-                label_result.Text = "Final Result will appear here...";
-            }
+            //if (textBox_secondNumber.Text != string.Empty)
+            //{
+            //    textBox_secondNumber.Text = "";
+            //}
+            //if (label_result.Text != "Final Result will appear here...")
+            //{
+            //    label_result.Text = "Final Result will appear here...";
+            //}
         }
 
         private void button_backspace_Click(object sender, EventArgs e)
         {
-            if (textBox_firstNumber.Text != string.Empty)
+            if (textBox_number.Text != string.Empty)
             {
-                int len = textBox_firstNumber.Text.Length;
-                textBox_firstNumber.Text = textBox_firstNumber.Text.Remove(len - 1);
-                len = textBox_firstNumber.Text.Length;
+                int len = textBox_number.Text.Length;
+                textBox_number.Text = textBox_number.Text.Remove(len - 1);
+                len = textBox_number.Text.Length;
             }
         }
 
         private void button_equal_Click(object sender, EventArgs e)
         {
-            string text = textBox_firstNumber.Text;
-            string[] textArray = new string[text.Length];
+            string text = textBox_number.Text;
             string[] addArray = text.Split('+');
-            result = int.Parse(addArray[0]) + int.Parse(addArray[1]);
-            label_result.Text = result.ToString();
+
+            result = 0;
+            for(int i=0;i<addArray.Length;i++)
+            {
+                result = result + int.Parse(addArray[i]);
+            }
+            textBox_number.Text = result.ToString();
         }
     }
 }
